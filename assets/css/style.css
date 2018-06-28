@@ -1,6 +1,6 @@
-span{
+#answerChoices span{
     border:2px black solid;
 }
-span:hover{
+#answerChoices span:hover{
     background-color: gray;
 }

@@ -76,52 +76,52 @@ function generateQuestion()
         {
             correctAnswer++;
             clearTimeout(temp);
-                $("#answerChoices").html("Correct!");
-                i++;
-                if(i == numQuestions)
-                {
-                    setTimeout(function(){
-                    $("#answerChoices").html("correct: "+correctAnswer+"<br> wrong: "+wrongAnswer);
-                    var newButton = $("<button>");
-                    newButton.text("RESTART");
-                    $("#contentBox").append(newButton);
-                    $(document).on("click","button",function(){
-                        location.reload();
-                    })})}
-    else
-    {
-        time = 10;
-        setTimeout(function(){
-            $("#question").html(questions[i]["question"]);
-            $("#answerChoices").html("<span>"+questions[i]["answerOne"]+"</span><br><span>"+ questions[i]["answerTwo"] +"</span><br><span>"+questions[i]["answerThree"]+"</span>");
-            temp = setInterval(Timer,1000);
-    },3000);
-    }
+            $("#answerChoices").html("Correct!");
+            i++;
+            if(i == numQuestions)
+            {
+                setTimeout(function(){
+                $("#answerChoices").html("correct: "+correctAnswer+"<br> wrong: "+wrongAnswer);
+                var newButton = $("<button>");
+                newButton.text("RESTART");
+                $("#contentBox").append(newButton);
+                $(document).on("click","button",function(){
+                location.reload();
+                })})}
+            else
+            {
+                time = 10;
+                setTimeout(function(){
+                $("#question").html(questions[i]["question"]);
+                $("#answerChoices").html("<span>"+questions[i]["answerOne"]+"</span><br><span>"+ questions[i]["answerTwo"] +"</span><br><span>"+questions[i]["answerThree"]+"</span>");
+                temp = setInterval(Timer,1000);
+                },3000);
+            }
         }
         else{
             wrongAnswer++;
             clearTimeout(temp);
-                $("#answerChoices").html("The correct answer is ");
-                i++;
-                if(i == numQuestions)
-                {
-                    setTimeout(function(){
-                        $("#answerChoices").html("correct: "+correctAnswer+"<br> wrong: "+wrongAnswer);
-                         var newButton = $("<button>");
-                        newButton.text("RESTART");
-                        $("#contentBox").append(newButton);
-                        $(document).on("click","button",function(){
-                            location.reload();
-                })})}
-                else
-                {
-                    time = 10;
-                    setTimeout(function(){
-                        $("#question").html(questions[i]["question"]);
-                        $("#answerChoices").html("<span>"+questions[i]["answerOne"]+"</span><br><span>"+ questions[i]["answerTwo"] +"</span><br><span>"+questions[i]["answerThree"]+"</span>");
-                        temp = setInterval(Timer,1000);
-                },3000);
-                }
+            $("#answerChoices").html("The correct answer is ");
+            i++;
+            if(i == numQuestions)
+            {
+                setTimeout(function(){
+                $("#answerChoices").html("correct: "+correctAnswer+"<br> wrong: "+wrongAnswer);
+                var newButton = $("<button>");
+                newButton.text("RESTART");
+                $("#contentBox").append(newButton);
+                $(document).on("click","button",function(){
+                location.reload();
+               })})}
+            else
+            {
+                time = 10;
+                setTimeout(function(){
+                    $("#question").html(questions[i]["question"]);
+                    $("#answerChoices").html("<span>"+questions[i]["answerOne"]+"</span><br><span>"+ question[i]["answerTwo"] +"</span><br><span>"+questions[i]["answerThree"]+"</span>");
+                    temp = setInterval(Timer,1000);
+            },3000);
+            }
         }
     })
 }
