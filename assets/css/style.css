@@ -1,0 +1,6 @@
+span{
+    border:2px black solid;
+}
+span:hover{
+    background-color: gray;
+}
